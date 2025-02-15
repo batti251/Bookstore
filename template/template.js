@@ -36,7 +36,7 @@ function bookTemplate(booksIndex) {
 <div class="book-miscellaneous">     
  <div class="like-button">
     <div id="${booksIndex} totalLikes">${bookObj.likes}</div>
-    <div class="d-none" id="${booksIndex} liked">${bookObj.liked}</div><button id="${booksIndex} likedButton" onclick="voteLike(${booksIndex}) , setButtonColor(${booksIndex})"><img id="${booksIndex} likedHeart"  src="/img/heart.png" alt="heart" class=""></button>
+    <div class="d-none" id="${booksIndex} liked">${bookObj.liked}</div><button id="${booksIndex} likedButton" onclick="voteLike(${booksIndex}) , setButtonColor(${booksIndex})"><img id="${booksIndex} likedHeart"  src="img/heart.png" alt="heart" class=""></button>
   </div>
   <div class="price" id="${booksIndex} price"></div>
   </div>
