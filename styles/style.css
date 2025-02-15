@@ -1,0 +1,102 @@
+.book-container {
+  display: grid;
+  justify-content: center;
+  margin: 16px 0 0 0;
+  padding: 16px 0 0 0;
+  width: 600px;
+  background-color: rgba(72, 136, 136, 0.685);
+  border-radius: 8px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  border-style: none;
+  padding: 0;
+  border-radius: 50px;
+  height: 32px;
+}
+
+.heart-icon-true {
+  background-color: red;
+  border-radius: 50px;
+  height: 32px;
+}
+
+.heart-icon-false {
+  background-color: gray;
+  border-radius: 50px;
+  height: 32px;
+}
+
+.collected-information {
+  padding: 16px 0 16px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 8px;
+}
+
+.review-section {
+  display: grid;
+  height: 200px;
+  width: 500px;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin: 16px 0 16px 0;
+}
+
+.input-commentary {
+  height: 24px;
+  width: 500px;
+  margin: 0 0 16px 0;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: 5px 10px 20px rgba(61, 102, 102) inset;
+}
+
+header {
+  background-color: rgb(25, 63, 75);
+  height: 100px;
+  display: grid;
+  place-items: center;
+}
+
+tbody {
+  display: flex;
+}
+
+.user-nickname {
+  width: 200px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.user-comment {
+  display: flex;
+  width: -webkit-fill-available;
+}
+
+.book-card-value {
+  width: 64px;
+}
+
+.book-details {
+  width: 240px;
+}
+
+.book-miscellaneous{
+display: grid;
+gap: 40px;
+}
