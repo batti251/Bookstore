@@ -2,11 +2,13 @@ body {
   margin: 0;
   font-family: "Exo 2", "italic";
   color: antiquewhite;
+  box-sizing: border-box;
 }
 
 #booksStore {
   display: grid;
-  place-items: center;
+  grid-template-areas: '1';
+  place-items: center;  
   background-color: rgba(61, 102, 102);
 }
 
@@ -50,8 +52,4 @@ body {
   height: 164px;
 }
 
-#name {
-  font-weight: bold;
-  position: relative;
-  top: -30px;
-}
+

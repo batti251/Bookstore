@@ -43,9 +43,12 @@ function bookTemplate(booksIndex) {
 </div>
      <div class="review">
     <div class="review-section border"id="${booksIndex} comments"></div>
-   <input onkeydown="enterComment()" type="text" class="input-commentary" id="${booksIndex} newComment">
+    <input onkeydown="enterComment()" type="text" class="input-user" id="${booksIndex} userID" placeholder="... dein Username">  
+   <input onkeydown="enterComment()" type="text" class="input-commentary test" id="${booksIndex} newComment" placeholder="...dein Kommentar">
   </div>
+
   </div>`;
+
 }
 
 function commentsTemplate(user, message) {

@@ -31,18 +31,39 @@ function getComments(booksIndex) {
 }
 
 function releaseComment() {
-  let user = prompt("Bitte Beutzernamen eingeben:");
+
   for (let booksIndex = 0; booksIndex < books.length; booksIndex++) {
     let newCommentRef = document.getElementById(`${booksIndex} newComment`);
+    let user = document.getElementById(`${booksIndex} userID`)
     let message = newCommentRef.value;
-    if (message !== "") {
-      let newComment = { name: user, comment: message };
-      books[booksIndex].comments.push(newComment);
-    }
-  }
+    if (message !== "" && user.value !== "") {
+       let newComment = { name: user.value, comment: message };
+      books[booksIndex].comments.push(newComment);break
+    } else alert()
+
+    
+  } 
   saveLocalStorage();
   renderAll();
+
 }
+
+function alert() {
+  let alertMessage = document.getElementById('alert');
+  alertMessage.classList.remove('d-none');
+
+  alertMessage.style.animation = "none";
+  setTimeout(function() {
+    alertMessage.style.animation = "fadeOut 4s forwards"; 
+  }, 10);
+
+  setTimeout(function() {
+    alertMessage.classList.add('d-none');
+  }, 4000);
+}
+
+
+
 
 function voteLike(booksIndex) {
   let objKey = books[booksIndex];
@@ -62,7 +83,6 @@ function voteLike(booksIndex) {
 
 function setButtonColor(booksIndex) {
   let objKey = books[booksIndex];
-  console.log(objKey.liked);
   if (objKey.liked == true) {
     document
       .getElementById(`${booksIndex} likedHeart`)
@@ -77,16 +97,13 @@ function setButtonColor(booksIndex) {
 
 function localCurrency(booksIndex) {
   let commentsRef = document.getElementById(`${booksIndex} price`);
-  console.log(commentsRef);
   let objKey = books[booksIndex].price;
   let newCurrency = objKey.toLocaleString("de-DE", {
     style: "currency",
     currency: "EUR",
   });
-  console.log(newCurrency);
   objKey = newCurrency;
   commentsRef.innerHTML = newCurrency;
-
   saveLocalStorage();
 }
 
